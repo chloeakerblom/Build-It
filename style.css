@@ -1,11 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap'); */
+
 body{
     margin: 0;
     padding: 0;
     height: 100vh;
     width: 100vw;
+    overflow-x: hidden;
+    /* font-family: Arial, Helvetica, sans-serif; */
     display: grid;
     grid-template-columns: auto;
-    grid-template-rows: 17% 70% 140% 39% ;
+    grid-template-rows: 15.7% 70% 140% 39% ;
     grid-template-areas: 
         "nav"
         "header"
@@ -13,20 +18,57 @@ body{
         "footer";
 }
 
-nav{
+.navigation{
     grid-area: nav;
     justify-content: center;
-    background-color: #044056;
+    align-items: center;
+    background-color: white;
     display: grid;
-    grid-template-columns: 10% 10% 20% 10% 10%;
+    grid-template-columns: 11.5% 11.5% 20% 11.5% 11.5%;
     grid-template-rows: auto;
     grid-template-areas: 
         "nav1 nav2 logo nav3 nav4";
-}    
+}
+
+nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+nav:nth-of-type(1){
+    grid-area: nav1;
+    /* background-color: green; */
+}
+
+nav:nth-of-type(2){
+    grid-area: nav2;
+    /* background-color: crimson; */
+}
+
+nav:nth-of-type(3){
+    grid-area: logo;
+    /* background-color: plum; */
+}
+
+nav:nth-of-type(4){
+    grid-area: nav3;
+    /* background-color: purple; */
+}
+
+nav:nth-of-type(5){
+    grid-area: nav4;
+    /* background-color: brown; */
+}
+
+.home-nav{
+    background-color: #044056;
+}
 
 header{
     grid-area: header;
-    background-color: #044056;
+    /* background-color: #044056; */
 }
 
 .container{
@@ -41,17 +83,20 @@ header{
 
 }
 
-.row:nth-of-type(1){
+.row{
     grid-area: row1;
-    background-color: crimson;
-    display: grid;
+    /* background-color: crimson; */
+    /* display: grid;
     grid-template-columns: 50% 50%;
     grid-template-rows: auto;
     grid-template-areas: 
-        "col1 col2";
+        "col1 col2"; */
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
 }
 
-.home-col:nth-of-type(1){
+/* .home-col:nth-of-type(1){
     grid-area: col1;
     background-image: url(Images/craft-supplies.jpg);
     background-size: cover;
@@ -62,6 +107,10 @@ header{
     background-image: url(Images/legs-with-paint.jpg);
     background-size: cover;
 
+} */
+
+.home-col{
+    /* justify-content: center; */
 }
 
 
@@ -74,10 +123,10 @@ img{
     /* position: absolute;
     width: 80%;
     margin: 5px; */
-    width:100%;
-    height:100%;
+    width:600px;
+    /* height:554px; */
     /* padding: 20px; */
-    object-fit:cover;
+    /* object-fit:cover; */
 }
 
 .home-button{
@@ -87,13 +136,38 @@ img{
     /* transform: translate(50%, 50%);  */
 }
 
-nav a{
-    color: white;
+.navigation a{
+    color: #044056;
     text-decoration: none;
     justify-content: center;
+    font-size: 18px;
+    font-family: 'Inter', sans-serif;
 }
 
-nav img{
-    height:75%;
-    object-fit: scale-down;
+.navigation a:hover{
+    color: #a9a9a9;
+}
+
+.navigation .nav-active{
+    color: #a9a9a9;
+}
+
+.home-nav a{
+    color: white;
+}
+
+.home-nav a:hover{
+    color: #ffd873;
+}
+
+.navigation img{
+    width:80%;
+    /* background-color: deeppink; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 25px;
+    /* height:100%; */
+    /* object-fit: scale-down; */
+    /* align-content: center; */
 }
