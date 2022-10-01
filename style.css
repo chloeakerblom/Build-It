@@ -1,0 +1,99 @@
+body{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 17% 70% 140% 39% ;
+    grid-template-areas: 
+        "nav"
+        "header"
+        "container"
+        "footer";
+}
+
+nav{
+    grid-area: nav;
+    justify-content: center;
+    background-color: #044056;
+    display: grid;
+    grid-template-columns: 10% 10% 20% 10% 10%;
+    grid-template-rows: auto;
+    grid-template-areas: 
+        "nav1 nav2 logo nav3 nav4";
+}    
+
+header{
+    grid-area: header;
+    background-color: #044056;
+}
+
+.container{
+    grid-area: container;
+    background-color: white;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 50% auto ;
+    grid-template-areas: 
+        "row1"
+        "row2";
+
+}
+
+.row:nth-of-type(1){
+    grid-area: row1;
+    background-color: crimson;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto;
+    grid-template-areas: 
+        "col1 col2";
+}
+
+.home-col:nth-of-type(1){
+    grid-area: col1;
+    background-image: url(Images/craft-supplies.jpg);
+    background-size: cover;
+}
+
+.home-col:nth-of-type(2){
+    grid-area: col2;
+    background-image: url(Images/legs-with-paint.jpg);
+    background-size: cover;
+
+}
+
+
+footer{
+    grid-area: footer;
+    background-color: #044056;
+}
+
+img{
+    /* position: absolute;
+    width: 80%;
+    margin: 5px; */
+    width:100%;
+    height:100%;
+    /* padding: 20px; */
+    object-fit:cover;
+}
+
+.home-button{
+    /* position: absolute; */
+    top: 50%;
+    left: 50%;
+    /* transform: translate(50%, 50%);  */
+}
+
+nav a{
+    color: white;
+    text-decoration: none;
+    justify-content: center;
+}
+
+nav img{
+    height:75%;
+    object-fit: scale-down;
+}
