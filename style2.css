@@ -159,39 +159,93 @@ nav:nth-of-type(5){
     opacity: 1;
 }
 
+.button-home h1{
+    color: black;
+    position: absolute;
+}
+
+.button-home h1:hover{
+    color: white;
+}
+
 .carousel-row-home{
     grid-area: carousel-row-home;
+    margin-top: 40px;
+    margin-bottom: 100px;
+    display: grid;
+    grid-template-rows: 20% auto 20%;
+    grid-template-columns: auto;
+    grid-template-areas: 
+        "title"
+        "card-row"
+        "dots";
+}
+
+.title-row{
+    grid-area: title;
+    /* background-color: #ffd873; */
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.title-row h2{
+    color: black;
+}
+
+.card-row{
+    grid-area: card-row;
+    /* background-color: darkgoldenrod; */
     display: grid;
     grid-template-rows: auto;
     grid-template-columns: 25% auto 25%;
     grid-template-areas: "arrow1 grid-image arrow2";
+
 }
 
-.arrow:nth-of-type(1){
+.card-row .arrow:nth-of-type(1){
     grid-area: arrow1;
     background-color: plum;
 }
 
-.arrow:nth-of-type(2){
+.card-row .arrow:nth-of-type(2){
     grid-area: arrow2;
     background-color: cornflowerblue;
 }
 
-.grid-image{
+.grid-image1{
     grid-area: grid-image;
-    background-color: darkmagenta;
+    /* background-color: darkmagenta; */
     display: flex;
     flex-direction: column;
+    align-items: center;
     border: black 1px solid;
-    height: 200px;
+    /* height: 200px; */
     margin-left: 10px;
     margin-right: 10px;
 }
 
-.grid-image img{
-    width: auto;
-    height: 200px;
+.grid-image2{
+    display: none;
+}
+
+.grid-image3{
+    display: none;
+}
+
+.grid-image4{
+    display: none;
+}
+
+.grid-img{
+    border-radius: 10px;
+}
+
+.grid-img img{
+    width:100%;
+    height:75%;
     object-fit: cover;
+    border-radius: 10px 10px 0px 0px;
 }
 
 footer{
@@ -443,7 +497,7 @@ a{
     .home{
         display: grid;
         grid-template-columns: 50% auto;
-        grid-template-rows: 100px 445px 440px 609px 304px;
+        grid-template-rows: 100px 445px 440px 600px 304px;
         grid-template-areas: 
         "nav nav"
         "header header"
@@ -580,33 +634,82 @@ a{
         height: auto;
     }
 
-    .carousel-row-home{
-        grid-area: carousel-row-home;
+    .card-row{
+        grid-area: card-row;
         display: grid;
         grid-template-rows: auto;
         grid-template-columns: 10% 20% 20% 20% 20% 10%;
         grid-template-areas: "arrow1 grid-image1 grid-image2 grid-image3 grid-image4 arrow2";
+    
     }
 
-    .grid-image:nth-of-type(1){
+    .grid-image1{
         grid-area: grid-image1;
-        background-color: yellowgreen;
+        /* background-color: darkmagenta; */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border: black 1px solid;
+        /* width:75%;
+        height: 75%; */
+        margin-left: 10px;
+        margin-right: 10px;
     }
-
-    .grid-image:nth-of-type(2){
+    
+    .grid-image2{
         grid-area: grid-image2;
-        background-color: aqua;
+        /* background-color: blue; */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border: black 1px solid;
+        /* width:75%;
+        height: 75%; */
+        margin-left: 10px;
+        margin-right: 10px;
     }
-
-    .grid-image:nth-of-type(3){
+    
+    .grid-image3{
         grid-area: grid-image3;
-        background-color: brown;
+        /* background-color: greenyellow; */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border: black 1px solid;
+        /* width:75%;
+        height: 75%; */
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    
+    .grid-image4{
+        grid-area: grid-image4;
+        /* background-color: orange; */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border: black 1px solid;
+        /* width:75%;
+        height: 75%; */
+        margin-left: 10px;
+        margin-right: 10px;
     }
 
-    /* .grid-image:nth-of-type(4){
-        grid-area: grid-image4;
-        background-color: orange;
-    } */
+    .grid-img{
+        margin-left: 12.5%;
+    }
+
+    .grid-img img{
+        width: 100%;
+        height: 75%;
+        object-fit: cover;
+    }
+
+    .dots-row{
+        grid-area: dots;
+        background-color: aquamarine;
+        /* margin-bottom: 100px; */
+    }
 
     footer{
         grid-area: footer;
