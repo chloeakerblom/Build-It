@@ -199,7 +199,7 @@ nav:nth-of-type(5){
     /* background-color: darkgoldenrod; */
     display: grid;
     grid-template-rows: auto;
-    grid-template-columns: 25% auto 25%;
+    grid-template-columns: 15% auto 15%;
     grid-template-areas: "arrow1 grid-image arrow2";
 
 }
@@ -221,7 +221,7 @@ nav:nth-of-type(5){
 }
 
 .arrow img{
-    height: 33%;
+    height: 15%;
     width: auto;
 }
 
@@ -512,7 +512,7 @@ main{
 .category{
     display: grid;
     grid-template-columns: auto auto auto;
-    grid-template-rows: repeat(9) auto;
+    grid-template-rows: repeat(9, auto);
     grid-template-areas: 
         "grid-row1"
         "grid-row2"
@@ -534,9 +534,9 @@ main{
 .grid-image-CAT3{
     grid-area: grid-row3;
 }
-.grid-image-CAT4{
+/* .grid-image-CAT4{
     grid-area: grid-row4;
-}
+} */
 .grid-image-CAT5{
     grid-area: grid-row5;
 }
@@ -554,6 +554,10 @@ main{
     margin-bottom: 50px;
 }
 
+.category a{
+    grid-area: grid-row4;
+}
+
 .grid-image-CAT{
     display: flex;
     flex-direction: column;
@@ -561,8 +565,9 @@ main{
     border: black 1px solid;
     height: 400px;
     margin-top: 30px;
-    margin-left: 10px;
+    margin-left: 10%;
     margin-right: 10px;
+    width: 80%
 }
 
 .forum{
@@ -609,6 +614,99 @@ a{
     text-decoration: none;
 }
 
+.carousel-row-SR{
+    grid-area: carousel-row-home;
+    margin-top: 100px;
+    /* margin-bottom: 100px; */
+    display: grid;
+    grid-template-rows: 20% auto 40%;
+    grid-template-columns: auto;
+    grid-template-areas: 
+        "title"
+        "card-row"
+        "dots";
+}
+
+.card-row-SR{
+    grid-area: card-row;
+    /* background-color: darkgoldenrod; */
+    /* margin-bottom: 75px; */
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 15% auto 15%;
+    grid-template-areas: "arrow1 grid-image arrow2";
+
+}
+
+.ask-a-question{
+    height: 750px;
+    display: grid;
+    margin-top: 20px;
+    grid-template-columns: auto;
+    grid-template-rows: 13.3% 40% 13.3% 13.3% 20%;
+    grid-template-areas: 
+        "question-box"
+        "description-box"
+        "categories-box"
+        "email-box"
+        "post-button";
+}
+
+.text-field{
+    display: grid;
+    justify-content: center;
+    grid-template-columns: auto;
+    grid-template-rows: 33.3% auto;
+    grid-template-areas: 
+        "title-text"
+        "text-box";
+}
+
+.title-text{
+    grid-area: title-text;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title-text img{
+    width: 8%;
+    height: auto;
+}
+
+.text-box{
+    grid-area: text-box;
+    background-color: white;
+    height: 50%;
+    border: 1px #a8a8a8 solid;
+    margin-top: 5px;
+}
+
+.question-text-field{
+    grid-area: question-box;
+    /* background-color: blue; */
+}
+
+.description-text-field{
+    grid-area: description-box;
+    background-color: plum;
+}
+
+.categories-text-field{
+    grid-area: categories-box;
+    background-color: greenyellow;
+}
+
+.email-text-field{
+    grid-area: email-box;
+    background-color: #ffd873;
+}
+
+.post-button{
+    grid-area: post-button;
+    background-color: crimson;
+    display: flex;
+}
 
 
 @media screen and (min-width: 1024px){
@@ -665,11 +763,10 @@ a{
         margin-bottom: 100px;
         margin-top: 25px;
         grid-template-columns: 300px 300px 300px;
-        grid-template-rows: 350px 350px 350px 304px;
+        grid-template-rows: 350px 350px 450px;
         grid-template-areas: 
             "grid-row1 grid-row2 grid-row3"
             "grid-row4 grid-row5 grid-row6"
-            "grid-row7 grid-row8 grid-row9"
             "carousel-row-home carousel-row-home carousel-row-home";
     }
 
@@ -935,4 +1032,20 @@ a{
     .carousel-row-FaG{
         margin-top: 20px;
     }
+
+    .card-row-SR{
+        grid-area: card-row;
+        justify-content: center;
+        display: grid;
+        grid-template-rows: auto;
+        /* grid-template-columns: 10% 20% 20% 20% 20% 10%; */
+        grid-template-columns: 9% 22% 22% 22% 22% 9%;
+        grid-template-areas: "arrow1 grid-image1 grid-image2 grid-image3 grid-image4 arrow2";
+    
+    }
+
+    .card-row-SR .grid-img{
+        height: 210px;
+    }
+
 }
