@@ -146,6 +146,7 @@ nav:nth-of-type(5){
     justify-content: center;
     align-items: center;
     margin-top: 25px;
+
 }
 
 .button-home img{
@@ -157,6 +158,9 @@ nav:nth-of-type(5){
 
 .button-home img:hover{
     opacity: 1;
+    transition-property: all;
+    transition-duration: 150ms;
+    transition-timing-function: ease-in-out;
 }
 
 .button-home h1{
@@ -164,8 +168,11 @@ nav:nth-of-type(5){
     position: absolute;
 }
 
-.button-home h1:hover{
+.button-home:hover h1{
     color: white;
+    transition-property: all;
+    transition-duration: 150ms;
+    transition-timing-function: ease-in-out;
 }
 
 .carousel-row-home{
@@ -372,6 +379,11 @@ h6{
     font-size: 7px;
 }
 
+p{
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+}
+
 footer h6{
     margin-top: -10px;
     line-height: 11px;
@@ -433,7 +445,7 @@ main{
 .find-a-guide{
     display: grid;
     grid-template-columns: auto;
-    grid-template-rows: 150px 500px 500px 500px;
+    grid-template-rows: 175px 500px 500px 500px;
     grid-template-areas: 
         "search-bar"
         "carousel-row1"
@@ -571,12 +583,221 @@ main{
 }
 
 .forum{
+    height: 4900px;
     display: grid;
     grid-template-columns: auto;
-    grid-template-rows: 100px 200px;
+    grid-template-rows: 100px auto;
     grid-template-areas: 
         "button-bar"
-        "grid";
+        "forum-content";
+}
+
+.forum-content{
+    height: 3000px;
+    grid-area: forum-content;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 5% auto 5%;
+    grid-template-areas: 
+        "filters"
+        "question-grid"
+        "post-button";
+}
+
+.filters{
+    grid-area: filters;
+    background-color: darkgreen;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mobile-filter-popdown{
+    height: 40%;
+    width: 80%;
+    border: 1px black solid;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.keyword-search-bar{
+    display: none;
+}
+
+.filter-popdown1{
+    display: none;
+}
+
+.filter-popdown2{
+    display: none;
+}
+
+.filter-popdown3{
+    display: none;
+}
+
+.question-grid{
+    grid-area: question-grid;
+    /* background-color: fuchsia; */
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: repeat(12, auto);
+    grid-row-gap: 20px;
+    grid-template-areas: 
+        "question-tile1"
+        "question-tile2"
+        "question-tile3"
+        "question-tile4"
+        "question-tile5"
+        "question-tile6"
+        "question-tile7"
+        "question-tile8"
+        "question-tile9"
+        "question-tile10"
+        "question-tile11"
+        "question-tile12";
+}
+
+.question-tile1{
+    grid-area: question-tile1;
+    background-color: lightblue;
+}
+
+.question-tile2{
+    grid-area: question-tile2;
+    background-color: green;
+}
+
+.question-tile3{
+    grid-area: question-tile3;
+    background-color: lightblue;
+}
+
+.question-tile4{
+    grid-area: question-tile4;
+    background-color: green;
+}
+
+.question-tile5{
+    grid-area: question-tile5;
+    background-color: lightblue;
+}
+
+.question-tile6{
+    grid-area: question-tile6;
+    background-color: green;
+}
+
+.question-tile7{
+    grid-area: question-tile7;
+    background-color: lightblue;
+}
+
+.question-tile8{
+    grid-area: question-tile8;
+    background-color: green;
+}
+
+.question-tile9{
+    grid-area: question-tile9;
+    background-color: lightblue;
+}
+
+.question-tile10{
+    grid-area: question-tile10;
+    background-color: green;
+}
+
+.question-tile11{
+    grid-area: question-tile11;
+    background-color: lightblue;
+}
+
+.question-tile12{
+    grid-area: question-tile12;
+    background-color: green;
+}
+
+.question-tile{
+    width: 90%;
+    height: 350px;
+    margin-left: 5%;
+    background-color: white;
+    border: 1px black solid;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 20% auto 30%;
+    grid-template-areas: 
+        "caption-text"
+        "question-text"
+        "filter-tags";
+}
+
+.caption-text{
+    grid-area: caption-text;
+    /* background-color: darksalmon; */
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+
+.caption-text h5{
+    color: #a8a8a8;
+}
+
+.question-text{
+    grid-area: question-text;
+    /* background-color: palegreen; */
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.filter-tags{
+    grid-area: filter-tags;
+    /* background-color: mediumslateblue; */
+    margin-left: 10px;
+    margin-right: -10px;
+    margin-top: 45px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto;
+    grid-template-areas: "tag1 tag2 tag3";
+}
+
+.tag1{
+    grid-area: tag1;
+    background-color: #ffd873;
+}
+
+.tag2{
+    grid-area: tag2;
+    background-color: darkgoldenrod;
+}
+
+.tag3{
+    grid-area: tag3;
+    background-color: #ffd873;
+}
+
+.tag{
+    height: 50%;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e8dbc8;
+    border-radius: 10px;
+}
+
+.tag-hidden{
+    visibility: hidden;
+}
+
+.tag h5{
+    color: black;
 }
 
 .button-bar{
@@ -588,8 +809,8 @@ main{
 
 button{
     background-color: #ffd873;
-    width: 75%;
-    height: 50%;
+    width: 250px;
+    height: 50px;
     border-radius: 10px;
     border: none;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -600,6 +821,7 @@ button{
 
 button h2{
     color: black;
+    font-size: 20px;
 }
 
 .button-light:hover{
@@ -607,7 +829,11 @@ button h2{
 }
 
 .button-dark:hover{
-    background-color: black;
+    background-color: #292929;
+}
+
+.button-dark:hover h2{
+    color: white;
 }
 
 a{
@@ -642,8 +868,9 @@ a{
     height: 750px;
     display: grid;
     margin-top: 20px;
+    margin-bottom: 150px;
     grid-template-columns: auto;
-    grid-template-rows: 13.3% 40% 13.3% 13.3% 20%;
+    grid-template-rows: 15% 40% 15% 15% 25%;
     grid-template-areas: 
         "question-box"
         "description-box"
@@ -654,7 +881,9 @@ a{
 
 .text-field{
     display: grid;
-    justify-content: center;
+    width: 90%;
+    margin-left: 5%;
+    /* justify-content: center; */
     grid-template-columns: auto;
     grid-template-rows: 33.3% auto;
     grid-template-areas: 
@@ -670,8 +899,8 @@ a{
 }
 
 .title-text img{
-    width: 8%;
-    height: auto;
+    width: auto;
+    height: 80%;
 }
 
 .text-box{
@@ -680,6 +909,13 @@ a{
     height: 50%;
     border: 1px #a8a8a8 solid;
     margin-top: 5px;
+    width: 100%;
+}
+
+.text-box-big{
+    grid-area: text-box-big;
+    height: 80%;
+    margin-top: -25px;
 }
 
 .question-text-field{
@@ -689,23 +925,106 @@ a{
 
 .description-text-field{
     grid-area: description-box;
-    background-color: plum;
+    display: grid;
+    width: 90%;
+    margin-left: 5%;
+    /* justify-content: center; */
+    grid-template-columns: auto;
+    grid-template-rows: 33.3% auto;
+    grid-template-areas: 
+        "title-text"
+        "text-box-big";
+    /* background-color: plum; */
+}
+
+.description-text-field img{
+    width: auto;
+    height: 30%;
 }
 
 .categories-text-field{
     grid-area: categories-box;
-    background-color: greenyellow;
+    /* background-color: greenyellow; */
 }
 
 .email-text-field{
     grid-area: email-box;
-    background-color: #ffd873;
+    display: grid;
+    width: 90%;
+    margin-left: 5%;
+    grid-template-columns: auto;
+    grid-template-rows: 33.3% auto 2%;
+    grid-template-areas: 
+        "title-text"
+        "text-box"
+        "sub-text";
+}
+
+.sub-text{
+    grid-area: sub-text;
+    margin-top: -25px;
+    font-size: 11px;
 }
 
 .post-button{
     grid-area: post-button;
-    background-color: crimson;
+    /* background-color: crimson; */
     display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.post-made{
+    height: 700px;
+    margin-top: 100px;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 30% 10% 15% 20%;
+    grid-template-areas: 
+        "tick-icon"
+        "title-text-PM"
+        "PM-text"
+        "post-button";
+}
+
+.title-text-PM{
+    grid-area: title-text-PM;
+    /* background-color: palevioletred; */
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.PM-text{
+    grid-area: PM-text;
+    /* background-color: aquamarine; */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 80%;
+    margin-left: 10%;
+}
+
+.tick-icon{
+    grid-area: tick-icon;
+    /* background-color: aquamarine; */
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.tick-icon img{
+    height: 80%;
+}
+
+.title-text-PM h2{
+    color: black;
+}
+
+.PM-text h3{
+    color: black;
+    font-size: 15px;
+    text-align: center;
 }
 
 
@@ -784,12 +1103,69 @@ a{
     }
 
     .forum{
+        height: 1600px;
         display: grid;
         grid-template-columns: auto;
-        grid-template-rows: 150px 200px;
+        grid-template-rows: 150px auto;
         grid-template-areas: 
             "button-bar"
-            "grid";
+            "forum-content";
+    }
+    
+    .forum-content{
+        height: 1350px;
+        grid-area: forum-content;
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: 10% auto 5%;
+        grid-row-gap: 0px;
+        grid-template-areas: 
+            "filters"
+            "question-grid"
+            "post-button";
+    }
+    
+    .filters{
+        grid-area: filters;
+        background-color: darkgreen;
+    }
+    
+    .question-grid{
+        grid-area: question-grid;
+        width: 65%;
+        margin-top: 50px;
+        margin-left: 17.5%;
+        /* background-color: fuchsia; */
+        display: grid;
+        grid-template-columns: repeat(3, auto);
+        grid-template-rows: repeat(4, auto);
+        grid-template-areas: 
+            "question-tile1 question-tile2 question-tile3"
+            "question-tile4 question-tile5 question-tile6"
+            "question-tile7 question-tile8 question-tile9"
+            "question-tile10 question-tile11 question-tile12";
+    }
+
+    .question-tile{
+        height: 250px;
+    }
+
+    .tag{
+        height: 30%;
+        width: 70px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #e8dbc8;
+        border-radius: 10px;
+    }
+
+    .tag h5{
+        font-size: 12px;
+    }
+
+    .forum-content .post-button{
+        margin-top: 75px;
     }
 
     h1{
@@ -1010,13 +1386,13 @@ a{
     }
 
     button{
-        width: 300px;
-        height: 60px;
+        width: 250px;
+        height: 50px;
         border-radius: 10px;
     }
 
     button h2{
-        font-size: 25px;
+        font-size: 20px;
     }
 
     .carousel-row-FaG .card-row{
@@ -1046,6 +1422,45 @@ a{
 
     .card-row-SR .grid-img{
         height: 210px;
+    }
+
+    .text-field{
+        width: 30%;
+        margin-left: 35%
+    }
+
+    .ask-a-question{
+        margin-top: 50px;
+    }
+
+    .post-made{
+        height: 450px;
+    }
+
+    .tick-icon img{
+        height: 125%;
+    }
+
+    .title-text-PM{
+        margin-top: 90px;
+    }
+
+    .title-text-PM h1{
+        font-size: 40px;
+    }
+
+    .PM-text{
+        width: 50%;
+        margin-left: 25%;
+        margin-top: 30px;
+    }
+
+    .PM-text h3{
+        font-size: 18px;
+    }
+
+    .post-made .post-button{
+        margin-top: 100px;
     }
 
 }
