@@ -473,7 +473,7 @@ main{
     background-position: 275px 10px; 
     background-repeat: no-repeat;
     background-size: 7.5%;
-    border-style: none;
+    border: 1px black solid;;
     border-width: 1px;
 }
 
@@ -927,6 +927,7 @@ a{
     grid-area: text-box-big;
     height: 80%;
     margin-top: -25px;
+    resize: none;
 }
 
 .question-text-field{
@@ -1167,6 +1168,120 @@ a{
     height: 100%;
     object-fit: cover;
     border-radius: 10px 10px 0px 0px;
+}
+
+.answer-page{
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto 450px 450px;
+    grid-template-areas: 
+        "answers"
+        "write-answer"
+        "carousel-row-ans";
+}
+
+.answers{
+    grid-area: answers;
+    /* background-color: crimson; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 100px;
+}
+
+.answers h2{
+    color: black;
+}
+
+.write-answer{
+    grid-area: write-answer;
+    background-color: #044056;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+}
+
+.answer-box{
+    height: 180px;
+    width: 70%;
+    padding: 20px;
+    resize:none;
+    margin-bottom: 50px;
+    border-radius: 10px;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+.carousel-row-ans{
+    grid-area: carousel-row-ans;
+}
+
+.answer{
+    height: 200px;
+    border: 1px black solid;
+    border-radius: 10px;
+    width: 90%;
+    margin-bottom: 20px;
+    display: grid;
+    grid-template-columns: 50% auto;
+    grid-template-rows: 70% auto;
+    grid-template-areas: 
+        "answer-text answer-text"
+        "thumbs-up thumbs-down";
+}
+
+.answer-text{
+    grid-area: answer-text;
+    margin: 10px;
+    margin-left: 15px;
+    /* background-color: yellowgreen; */
+}
+
+.thumbs-up{
+    grid-area: thumbs-up;
+    /* background-color: darkred; */
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-bottom: 5px;
+    margin-right: 20px;
+    background-image: url(Images/thumb_up.png);
+    background-repeat: no-repeat;
+    background-size: 40px;
+    background-position: 80px 5px;
+}
+
+.thumbs-down{
+    grid-area: thumbs-down;
+    /* background-color: mediumaquamarine; */
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 5px;
+    margin-right: 20px;
+    background-image: url(Images/thumb_down.png);
+    background-repeat: no-repeat;
+    background-size: 40px;
+    background-position: 20px 0px;
+}
+
+.thumb h4{
+    margin-left: 50px;
+}
+
+.thumbs-up:hover{
+    background-image: url(Images/thumb_up_filled.png);
+}
+
+.thumbs-down:hover{
+    background-image: url(Images/thumb_down_filled.png);
+}
+
+.answers button{
+    margin-top: 25px;
 }
 
 
@@ -1645,6 +1760,66 @@ a{
 
     .step-image img{
         border-radius: 0px 10px 10px 0px;
+    }
+
+    .answer{
+        height: 200px;
+        border: 1px black solid;
+        border-radius: 10px;
+        width: 60%;
+        margin-bottom: 20px;
+        display: grid;
+        grid-template-columns: 80% auto;
+        grid-template-rows: 50% auto;
+        grid-template-areas: 
+            "answer-text thumbs-up"
+            "answer-text thumbs-down";
+    }
+
+    .answer-text{
+        grid-area: answer-text;
+        margin: 10px;
+        margin-left: 15px;
+        /* background-color: yellowgreen; */
+    }
+
+    .thumbs-up{
+        grid-area: thumbs-up;
+        /* background-color: darkred; */
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        margin-bottom: 5px;
+        background-image: url(Images/thumb_up.png);
+        background-repeat: no-repeat;
+        background-size: 40px;
+        background-position: 30px 47px;
+    }
+    
+    .thumbs-down{
+        grid-area: thumbs-down;
+        /* background-color: mediumaquamarine; */
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        margin-top: 5px;
+        background-image: url(Images/thumb_down.png);
+        background-repeat: no-repeat;
+        background-size: 40px;
+        background-position: 30px 7px;
+    }
+    
+    .thumb h4{
+        margin-left: 50px;
+    }
+
+    .answer-box{
+        width: 40%;
+        margin-top: 10px;
+    }
+
+    .write-answer{
+        padding-top: 0px;
     }
 
 }
