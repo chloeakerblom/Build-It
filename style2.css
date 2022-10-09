@@ -136,6 +136,10 @@ nav:nth-of-type(5){
     margin-right: 20px;
 }
 
+#home-header h2{
+    font-size: 18px;
+}
+
 .home-col{
     display: flex;
     align-items: center;
@@ -192,7 +196,6 @@ nav:nth-of-type(5){
 .carousel-row-home{
     grid-area: carousel-row-home;
     margin-top: 40px;
-    /* margin-bottom: 100px; */
     display: grid;
     grid-template-rows: 20% auto 40%;
     grid-template-columns: auto;
@@ -204,30 +207,27 @@ nav:nth-of-type(5){
 
 .title-row{
     grid-area: title;
-    /* background-color: #ffd873; */
     display: flex;
     justify-content: center;
     align-items: flex-end;
     margin-bottom: 15px;
 }
 
-.title-row h2{
-    color: black;
+.title-row:nth-of-type(1){
+    margin-top: 30px;
 }
 
 .card-row{
     grid-area: card-row;
-    /* background-color: darkgoldenrod; */
     display: grid;
     grid-template-rows: auto;
-    grid-template-columns: 15% auto 15%;
+    grid-template-columns: 15% 70% 15%;
     grid-template-areas: "arrow1 grid-image arrow2";
 
 }
 
 .arrow1{
     grid-area: arrow1;
-    /* background-color: plum; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -235,7 +235,6 @@ nav:nth-of-type(5){
 
 .arrow2{
     grid-area: arrow2;
-    /* background-color: cornflowerblue; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -248,14 +247,16 @@ nav:nth-of-type(5){
 
 .grid-image1{
     grid-area: grid-image;
-    /* background-color: darkmagenta; */
     display: flex;
     flex-direction: column;
     align-items: center;
     border: black 1px solid;
-    /* height: 300px; */
     margin-left: 10px;
     margin-right: 10px;
+}
+
+.search-results .grid-image1{
+    height: 300px;
 }
 
 .grid-image2{
@@ -283,7 +284,6 @@ nav:nth-of-type(5){
 
 .dots-row{
     grid-area: dots;
-    /* background-color: aquamarine; */
     display: flex;
     justify-content: center;
 }
@@ -337,46 +337,65 @@ footer{
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
-    /* padding-top: 50px;
-    padding-left: 50px; */
 }
 
 footer img{
-    width: 40%;
+    width: 80%;
     height: auto;
+    margin-top: 20px;
 }
 
 h1{
     font-family: 'Source Sans Pro', sans-serif;
     font-weight: 550;
     text-align: center;
-    font-size: 30px;
+    font-size: 22px;
     margin-top: 10px;   
+}
+
+.Ans h1{
+    font-size: 18px;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 h2{
     font-family: 'Inter', sans-serif;
-    color: white;
+    color: black;
     font-weight: 300;
-    font-size: 18px;
+    font-size: 22px;
     line-height: 20px;
+}
+
+#home-header h2, .search-bar h2, .write-answer h2{
+    color: white;
+}
+
+.write-answer button h2{
+    color: black;
 }
 
 h3{
     font-family: 'Inter', sans-serif;
     font-weight: 300;
-    font-size: 10px;
+    font-size: 15px;
 }
 
 header h3{
     text-align: center;
-    margin-top: -10px;
+    margin-top: 10px;
+    margin-left: 15px;
+    margin-right: 15px;
 }
 
 h4{
     font-family: 'Inter', sans-serif;
     font-weight: 300;
-    font-size: 15px;
+    font-size: 17px;
+}
+
+a h4{
+    color: black;
 }
 
 h5{
@@ -396,6 +415,8 @@ h6{
 p{
     font-family: 'Inter', sans-serif;
     font-weight: 300;
+    font-size: 14;
+    margin-left: 50px;
 }
 
 footer h6{
@@ -416,7 +437,6 @@ header{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* border: #044056 5px solid; */
     height: 65%;
     width: 65%;
     border-radius: 5px; 
@@ -453,11 +473,11 @@ header{
 
 main{
     grid-area: main;
-    /* background-color: plum; */
 }
 
 .find-a-guide{
     display: grid;
+    margin-bottom: 20px;
     grid-template-columns: auto;
     grid-template-rows: 175px 500px 500px 500px;
     grid-template-areas: 
@@ -492,12 +512,6 @@ main{
     padding-left: 15px;
 }
 
-/* .search-box img{
-    width: 5.33%;
-    height: auto;
-    margin-right: 25px;
-} */
-
 .search-box h5{
     color: #a9a9a9;
     margin-left: 25px;
@@ -514,17 +528,14 @@ main{
 
 .carousel-row-FaG1{
     grid-area: carousel-row1;
-    /* background-color: #044056; */
 }
 
 .carousel-row-FaG2{
     grid-area: carousel-row2;
-    /* background-color: orange; */
 }
 
 .carousel-row-FaG3{
     grid-area: carousel-row3;
-    /* background-color: teal; */
 }
 
 .carousel-row-FaG .grid-img{
@@ -558,18 +569,15 @@ main{
         "grid-row9";
 }
 
-.grid-image-CAT1{
-    grid-area: grid-row1;
-}
 .grid-image-CAT2{
     grid-area: grid-row2;
 }
 .grid-image-CAT3{
     grid-area: grid-row3;
 }
-/* .grid-image-CAT4{
+.grid-image-CAT4{
     grid-area: grid-row4;
-} */
+}
 .grid-image-CAT5{
     grid-area: grid-row5;
 }
@@ -588,7 +596,7 @@ main{
 }
 
 .category a{
-    grid-area: grid-row4;
+    grid-area: grid-row1;
 }
 
 .grid-image-CAT{
@@ -596,11 +604,14 @@ main{
     flex-direction: column;
     align-items: center;
     border: black 1px solid;
-    height: 400px;
+    height: 300px;
     margin-top: 30px;
     margin-left: 10%;
-    margin-right: 10px;
-    width: 80%
+    width: 90%
+}
+
+.search-results .grid-image-CAT{
+    width: 80%;
 }
 
 .forum{
@@ -627,9 +638,6 @@ main{
 
 .filters{
     grid-area: filters;
-    /* display: flex;
-    justify-content: center;
-    align-items: center; */
     display: grid;
     grid-template-columns: 100%;
     grid-template-rows: auto;
@@ -638,10 +646,6 @@ main{
 
 .mobile-filter-popdown{
     grid-area: mobile-filter;
-    /* height: 60%; */
-    /* width: 90%; */
-    /* border: 1px black solid; */
-    /* background-color: white; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -672,7 +676,6 @@ main{
 
 .question-grid{
     grid-area: question-grid;
-    /* background-color: fuchsia; */
     display: grid;
     grid-template-columns: auto;
     grid-template-rows: repeat(12, auto);
@@ -770,7 +773,6 @@ main{
 
 .caption-text{
     grid-area: caption-text;
-    /* background-color: darksalmon; */
     padding-left: 25px;
     padding-right: 25px;
     margin-top: 10px;
@@ -783,25 +785,26 @@ main{
 
 .question-text{
     grid-area: question-text;
-    /* background-color: palegreen; */
     padding-left: 25px;
     padding-right: 25px;
 }
 
 .question-text h4{
     color: black;
+    font-size: 24px;
 }
 
 .filter-tags{
     grid-area: filter-tags;
-    /* background-color: mediumslateblue; */
-    /* margin-left: 10px;
-    margin-right: -10px; */
     margin-top: 45px;
     display: grid;
     grid-template-columns: auto auto auto;
     grid-template-rows: auto;
     grid-template-areas: "tag1 tag2 tag3";
+}
+
+.filter-tags h5{
+    font-size: 12px;
 }
 
 .tag1{
@@ -811,6 +814,7 @@ main{
 
 .tag2{
     grid-area: tag2;
+    margin-left: 10px;
 }
 
 .tag3{
@@ -825,6 +829,10 @@ main{
     align-items: center;
     background-color: #e8dbc8;
     border-radius: 10px;
+}
+
+.carousel-row-ans .tag{
+    width: 70px;
 }
 
 .tag-hidden{
@@ -855,7 +863,6 @@ button{
 }
 
 button h2{
-    color: black;
     font-size: 20px;
 }
 
@@ -877,8 +884,8 @@ a{
 
 .carousel-row-SR{
     grid-area: carousel-row-home;
-    margin-top: 100px;
-    /* margin-bottom: 100px; */
+    margin-top: 50px;
+    margin-bottom: 50px;
     display: grid;
     grid-template-rows: 20% auto 40%;
     grid-template-columns: auto;
@@ -890,8 +897,6 @@ a{
 
 .card-row-SR{
     grid-area: card-row;
-    /* background-color: darkgoldenrod; */
-    /* margin-bottom: 75px; */
     display: grid;
     grid-template-rows: auto;
     grid-template-columns: 15% auto 15%;
@@ -918,7 +923,6 @@ a{
     display: grid;
     width: 90%;
     margin-left: 5%;
-    /* justify-content: center; */
     grid-template-columns: auto;
     grid-template-rows: 33.3% auto;
     grid-template-areas: 
@@ -956,7 +960,6 @@ a{
 
 .question-text-field{
     grid-area: question-box;
-    /* background-color: blue; */
 }
 
 .description-text-field{
@@ -964,13 +967,11 @@ a{
     display: grid;
     width: 90%;
     margin-left: 5%;
-    /* justify-content: center; */
     grid-template-columns: auto;
     grid-template-rows: 33.3% auto;
     grid-template-areas: 
         "title-text"
         "text-box-big";
-    /* background-color: plum; */
 }
 
 .description-text-field img{
@@ -980,7 +981,6 @@ a{
 
 .categories-text-field{
     grid-area: categories-box;
-    /* background-color: greenyellow; */
 }
 
 .email-text-field{
@@ -1002,9 +1002,12 @@ a{
     font-size: 11px;
 }
 
+.sub-text p{
+    margin-left: 0px;
+}
+
 .post-button{
     grid-area: post-button;
-    /* background-color: crimson; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1025,7 +1028,6 @@ a{
 
 .title-text-PM{
     grid-area: title-text-PM;
-    /* background-color: palevioletred; */
     display: flex;
     justify-content: center;
     align-items: flex-end;
@@ -1033,7 +1035,6 @@ a{
 
 .PM-text{
     grid-area: PM-text;
-    /* background-color: aquamarine; */
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -1043,7 +1044,6 @@ a{
 
 .tick-icon{
     grid-area: tick-icon;
-    /* background-color: aquamarine; */
     display: flex;
     justify-content: center;
     align-items: flex-end;
@@ -1051,10 +1051,6 @@ a{
 
 .tick-icon img{
     height: 80%;
-}
-
-.title-text-PM h2{
-    color: black;
 }
 
 .PM-text h3{
@@ -1132,7 +1128,7 @@ a{
 }
 
 .step{
-    height: 400px;
+    height: 500px;
     width: 90%;
     margin-left: 5%;
     border: 1px black solid;
@@ -1143,10 +1139,6 @@ a{
     grid-template-areas: 
         "step-image"
         "step-text";
-}
-
-.step h2{
-    color: black;
 }
 
 .step-image{
@@ -1189,9 +1181,13 @@ a{
 
 .step img{
     width: 100%;
-    height: 100%;
+    height: 90%;
     object-fit: cover;
     border-radius: 10px 10px 0px 0px;
+}
+
+.step-text h2{
+    margin-top: 0px;
 }
 
 .answer-page{
@@ -1206,16 +1202,11 @@ a{
 
 .answers{
     grid-area: answers;
-    /* background-color: crimson; */
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: 20px;
     margin-bottom: 100px;
-}
-
-.answers h2{
-    color: black;
 }
 
 .write-answer{
@@ -1244,7 +1235,6 @@ a{
 }
 
 .answer{
-    height: 200px;
     border: 1px black solid;
     border-radius: 10px;
     width: 90%;
@@ -1260,13 +1250,12 @@ a{
 .answer-text{
     grid-area: answer-text;
     margin: 10px;
-    margin-left: 15px;
-    /* background-color: yellowgreen; */
+    margin-left: 25px;
+    margin-right: 25px;
 }
 
 .thumbs-up{
     grid-area: thumbs-up;
-    /* background-color: darkred; */
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -1275,25 +1264,24 @@ a{
     background-image: url(Images/thumb_up.png);
     background-repeat: no-repeat;
     background-size: 40px;
-    background-position: 80px 5px;
+    background-position: 80px 15px;
 }
 
 .thumbs-down{
     grid-area: thumbs-down;
-    /* background-color: mediumaquamarine; */
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-start;
     align-items: center;
-    margin-top: 5px;
+    margin-bottom: 5px;
     margin-right: 20px;
     background-image: url(Images/thumb_down.png);
     background-repeat: no-repeat;
     background-size: 40px;
-    background-position: 20px 0px;
+    background-position: 20px 15px;
 }
 
-.thumb h4{
-    margin-left: 50px;
+.thumbs-down p{
+    margin-left: 85px;
 }
 
 .thumbs-up:hover{
@@ -1309,7 +1297,7 @@ a{
 }
 
 .carousel-row-ans .grid-img{
-    height: 200px;
+    height: 250px;
 }
 
 .carousel-row-ans .question-text, .carousel-row-ans .caption-text, .carousel-row-ans .filter-tags{
@@ -1319,6 +1307,23 @@ a{
 .carousel-row-ans .caption-text h5{
     font-size: 10px;
 }
+
+.guide .YWN-carousel-row .title-row{
+    margin-top: 0px;
+}
+
+.carousel-row-ans .question-text h4{
+    font-size: 17px;
+    margin-top: 0px;
+}
+
+.carousel-row-ans .caption-text h5{
+    font-size: 15px;
+}
+
+.carousel-row-ans .grid-image1{
+    align-items: flex-start;
+} 
 
 
 @media screen and (min-width: 1024px){
@@ -1343,17 +1348,6 @@ a{
             "header"
             "main"
             "footer";
-    }
-
-    #find-a-guide{
-        display: grid;
-        grid-template-columns: auto;
-        grid-template-rows: 200px 700px 700px 700px;
-        grid-template-areas: 
-            "search-bar"
-            "carousel-row1"
-            "carousel-row2"
-            "carousel-row3";
     }
 
     .category{
@@ -1422,7 +1416,6 @@ a{
         width: 65%;
         margin-left: 17.5%;
         grid-area: filters;
-        /* background-color: darkgreen; */
         display: grid;
         grid-template-columns: 30% auto auto auto;
         grid-template-rows: auto;
@@ -1455,7 +1448,6 @@ a{
     
     .filter-popdown1{
         grid-area: filter-popdown1;
-        /* background-color: plum; */
         display: flex;
         align-items: center;
         justify-content: flex-end;
@@ -1463,7 +1455,6 @@ a{
     
     .filter-popdown2{
         grid-area: filter-popdown2;
-        /* background-color: aqua; */
         display: flex;
         align-items: center;
         justify-content: center;
@@ -1471,17 +1462,10 @@ a{
     
     .filter-popdown3{
         grid-area: filter-popdown3;
-        /* background-color: deeppink; */
         display: flex;
         align-items: center;
         justify-content: flex-start;
     }
-
-    /* .filter-popdown{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    } */
     
     .filter-popdown select{
         border: 1px black solid;
@@ -1496,7 +1480,6 @@ a{
         width: 65%;
         margin-top: 10px;
         margin-left: 17.5%;
-        /* background-color: fuchsia; */
         display: grid;
         grid-template-columns: repeat(3, auto);
         grid-template-rows: repeat(4, auto);
@@ -1558,6 +1541,12 @@ a{
         margin-top: 10px;   
     }
 
+    .Ans h1{
+        font-size: 30px;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
     h2{
         font-weight: 300;
         font-size: 30px;
@@ -1576,7 +1565,7 @@ a{
     }
     
     h4{
-        font-size: 14px;
+        font-size: 17px;
     }
     
     h5{
@@ -1676,6 +1665,10 @@ a{
     #home-header img{
         width: 80%;
     }
+
+    #home-header h2{
+        font-size: 30px;
+    }
     
     .header-box-inner{
         display: flex;
@@ -1698,7 +1691,6 @@ a{
         justify-content: center;
         display: grid;
         grid-template-rows: auto;
-        /* grid-template-columns: 10% 20% 20% 20% 20% 10%; */
         grid-template-columns: 8.5% 17% 17% 17% 17% 8.5%;
         grid-template-areas: "arrow1 grid-image1 grid-image2 grid-image3 grid-image4 arrow2";
     
@@ -1763,6 +1755,11 @@ a{
             "col1 col2 col3";
     }
 
+    footer img{
+        width: 40%;
+        margin-top: 0px;
+    }
+
     .footer-col:nth-of-type(1){
         grid-area: col1;
         display: flex;
@@ -1792,15 +1789,7 @@ a{
     }
 
     .search-box{
-        /* background-color: white; */
         width: 25%;
-        /* height: 40px;
-        border-radius: 30px;
-        display: flex;
-        align-items: center;
-        margin-top: -10px;
-        justify-content: space-between;
-        padding-left: 15px; */
         background-position: 290px 8px;
     }
 
@@ -1828,7 +1817,6 @@ a{
         justify-content: center;
         display: grid;
         grid-template-rows: auto;
-        /* grid-template-columns: 10% 20% 20% 20% 20% 10%; */
         grid-template-columns: 8.5% 22.67% 22.67% 22.67% 8.5%;
         grid-template-areas: "arrow1 grid-image1 grid-image2 grid-image3 arrow2";
     }
@@ -1842,7 +1830,6 @@ a{
         justify-content: center;
         display: grid;
         grid-template-rows: auto;
-        /* grid-template-columns: 10% 20% 20% 20% 20% 10%; */
         grid-template-columns: 9% 22% 22% 22% 22% 9%;
         grid-template-areas: "arrow1 grid-image1 grid-image2 grid-image3 grid-image4 arrow2";
     
@@ -1903,6 +1890,15 @@ a{
 
     .step-image img{
         border-radius: 0px 10px 10px 0px;
+        height: 300px;
+    }
+
+    .step-text{
+        margin-top: 10px;
+    }
+
+    .step-text h2{
+        margin-top: 18px;
     }
 
     .answer{
@@ -1922,13 +1918,12 @@ a{
     .answer-text{
         grid-area: answer-text;
         margin: 10px;
-        margin-left: 15px;
-        /* background-color: yellowgreen; */
+        margin-left: 25px;
+        margin-right: 25px;
     }
 
     .thumbs-up{
         grid-area: thumbs-up;
-        /* background-color: darkred; */
         display: flex;
         justify-content: center;
         align-items: flex-end;
@@ -1941,7 +1936,6 @@ a{
     
     .thumbs-down{
         grid-area: thumbs-down;
-        /* background-color: mediumaquamarine; */
         display: flex;
         justify-content: center;
         align-items: flex-start;
@@ -1952,7 +1946,7 @@ a{
         background-position: 30px 7px;
     }
     
-    .thumb h4{
+    .thumb p{
         margin-left: 50px;
     }
 
@@ -1983,6 +1977,54 @@ a{
 
     .answer-page .tag{
         margin-top: 7.5px;
+    }
+
+    .carousel-row-small .question-text h4{
+        font-size: 13px;
+    }
+
+    .carousel-row-small .grid-img h4{
+        font-size: 13px;
+    }
+
+    .question-text h4{
+        font-size: 17px;
+    }
+
+    .filter-tags h5{
+        font-size: 12px;
+    }
+
+    .YWN-carousel-row{
+        padding-bottom: 20px;
+    }
+
+    .title-row:nth-of-type(1){
+        margin-top: 10px;
+    }
+
+    .carousel-row-ans .question-text h4{
+        font-size: 13px;
+    }
+
+    .carousel-row-ans .caption-text h5{
+        font-size: 10px;
+    }
+
+    .carousel-row-ans .grid-image1{
+        align-items: center;
+    } 
+
+    .carousel-row-ans .grid-img{
+        height: 200px;
+    }
+
+    .carousel-row-ans{
+        transform: scale(1);
+    }
+
+    .tag2{
+        margin-left: 0px;
     }
 
 }
